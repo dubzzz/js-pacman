@@ -1,0 +1,11 @@
+Privacy Policy
+==============
+
+PacMan only requires the following permissions:
++ publish_actions
+
+These permissions are necessary to interact with your wall. PacMan asks you before publishing anything on your wall.
+PacMan does not send any details concerning yourself on distant servers.
+
+As an opensource project you can have a look to its source code on: https://github.com/dubzzz/js-pacman
+Running version for Facebook Canvas is: http://dubien.org/fbpacman/
