@@ -667,8 +667,11 @@ function hideCanvas() {
 	if (pc_hide_canvas_frame >= pc_FPS) {
 		if (pc_lifes >= 0)
 			setTimeout(iterateGame, 1000/pc_FPS);
-		else
+		else {
+			if (confirm("Do you want to publish this score on your Facebook profile?"))
+				FB.api('/me/feed', 'post', {message: 'I scored ' + pc_score + ' points in PacMan'});
 			setTimeout(onLoadDisplay, 1000/pc_FPS);
+		}
 		return;
 	}
 	setTimeout(hideCanvas, 1000/pc_FPS);
