@@ -673,6 +673,8 @@ function hideCanvas() {
 				alert("New highscore: " + pc_score + " (previous was " + current_best_score + ")");
 				current_best_score = pc_score;
 				document.getElementById("bestscore").innerHTML = current_best_score;
+				if (confirm("Do you want to publish this score on your Facebook profile?"))
+					FB.api('/me/feed', 'post', {message: 'I scored ' + pc_score + ' points at  HardCore PacMan - http://pacman.dubien.org/'});
 			}
 			setTimeout(onLoadDisplay, 1000/pc_FPS);
 		}
