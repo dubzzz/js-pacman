@@ -28,6 +28,16 @@ a:hover
 	background-color: #8888ff;
 }
 
+table#table-highscores
+{
+	display: none;
+}
+
+table#table-highscores tbody td:nth-child(3)
+{
+	text-align: right;
+}
+
 .game
 {
 	margin-top: 5px;
