@@ -669,7 +669,7 @@ function hideCanvas() {
 			setTimeout(iterateGame, 1000/pc_FPS);
 		else {
 			if (confirm("Do you want to publish this score on your Facebook profile?"))
-				FB.api('/me/feed', 'post', {message: 'I scored ' + pc_score + ' points in  HardCore PacMan - http://pacman.dubien.org/'});
+				FB.api('/me/scores', 'post', {score: pc_score});
 			setTimeout(onLoadDisplay, 1000/pc_FPS);
 		}
 		return;
