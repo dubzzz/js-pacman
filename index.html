@@ -9,6 +9,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <script type="text/javascript" src="js/pacman.js"></script>
+    <script type="text/javascript" src="js/scores.js"></script>
     <script type="text/javascript">
       document.onkeydown = function(e){
         if (e.keyCode == 37) //left
@@ -27,6 +28,7 @@
     <div id="fb-root"></div>
     <script src="//connect.facebook.net/en_US/all.js"></script>
     <script>
+      var accessToken = 0;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '1429099524039083',
@@ -37,6 +39,7 @@
         FB.login(function(response) {
           if(response.authResponse) {
             accessToken = response.authResponse.accessToken;
+            getScores();
           } else
             alert("Unable to access to your account");
         }, {scope: ['publish_actions']});
@@ -49,12 +52,15 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+
+
     </script>
     <canvas id="myCanvas" height="0" width="0"></canvas>
     <div class="game">
       <span id="score">0</span>
       <span id="lifes">0</span>
       <span id="multiplicator">1</span>
+      <span id="bestscore">0</span>
     </div>
     <a href="#" onclick="javascript:initGame();">Play</a>
     <a href="https://github.com/dubzzz/js-pacman" target="_blank">GitHub</a>

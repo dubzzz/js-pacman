@@ -668,8 +668,12 @@ function hideCanvas() {
 		if (pc_lifes >= 0)
 			setTimeout(iterateGame, 1000/pc_FPS);
 		else {
-			if (confirm("Do you want to publish this score on your Facebook profile?"))
+			if (current_best_score < pc_score) {
 				FB.api('/me/scores', 'post', {score: pc_score});
+				alert("New highscore: " + pc_score + " (previous was " + current_best_score + ")");
+				current_best_score = pc_score;
+				document.getElementById("bestscore").innerHTML = current_best_score;
+			}
 			setTimeout(onLoadDisplay, 1000/pc_FPS);
 		}
 		return;

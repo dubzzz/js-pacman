@@ -54,6 +54,12 @@ a:hover
 	content: "Score: ";
 }
 
+.game #bestscore::before
+{
+	content: "★ ";
+	color: #ffff00;
+}
+
 .game #lifes::after
 {
 	content: "❤";
