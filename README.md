@@ -10,7 +10,26 @@ So that this version has two sides:
 - a server (Node.js): Which has to manage the whole game. It has to compute each iteration of it and send back results to as many clients as necessary.
 - a client: Which has to render what has been computed server-side.
 
-## Run the server
+## Run the server using Docker
+
+### Setup Docker on your computer
+
+I recommand you to follow the instructions available on the official documentation of docker: https://docs.docker.com/engine/installation/linux/debian/
+
+### Build and run the image
+
+```bash
+$: # Create an image called pacman
+$: sudo docker build -t pacman .
+$: # Run it at port 8080 in daemon mode
+$: sudo docker run -d -p 8080:80 pacman
+$: # List running dockers (-a to see all dockers)
+$: sudo docker ps
+$: # Stop the container
+$: sudo docker stop <constainer_id>
+```
+
+## Run the server locally
 
 ### Setup Node.js on your computer
 
