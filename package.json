@@ -15,9 +15,9 @@
 	},
 	"author": "Nicolas Dubien <github@dubien.org>",
 	"description": "Another basic PacMan written in JavaScript for fun",
-  "scripts":
-  {
-    "start": "./app.js"
-  }
+	"scripts":
+	{
+		"start": "./app.js"
+	}
 }
 
