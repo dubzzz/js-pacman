@@ -14,6 +14,10 @@
 		"grunt-mocha-istanbul": "~2.4.0"
 	},
 	"author": "Nicolas Dubien <github@dubien.org>",
-	"description": "Another basic PacMan written in JavaScript for fun"
+	"description": "Another basic PacMan written in JavaScript for fun",
+  "scripts":
+  {
+    "start": "./app.js"
+  }
 }
 
